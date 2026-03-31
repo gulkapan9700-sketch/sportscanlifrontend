@@ -2,6 +2,7 @@
   "name": "sportsapp-frontend",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://gulkapan9700-sketch.github.io/Sportscanlifrontend",
   "dependencies": {
     "@tanstack/react-query": "^5.17.0",
     "axios": "^1.6.0",
@@ -16,11 +17,16 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [">0.2%", "not dead", "not op_mini all"],
     "development": ["last 1 chrome version", "last 1 firefox version"]
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:5000",
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
+  }
 }
+
