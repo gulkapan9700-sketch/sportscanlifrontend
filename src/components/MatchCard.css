@@ -1,0 +1,140 @@
+.match-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.match-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
+  position: relative;
+  cursor: pointer;
+}
+.match-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-bright);
+  transform: translateY(-1px);
+}
+.match-card--live {
+  border-left: 3px solid var(--red);
+  background: linear-gradient(90deg, rgba(255,71,87,0.06) 0%, var(--bg-card) 40%);
+}
+
+.match-card__league {
+  position: absolute;
+  top: -9px;
+  left: 12px;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  padding: 2px 6px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  text-transform: uppercase;
+}
+
+.match-card__body {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.match-card__team {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.match-card__team--away {
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+
+.match-card__logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.match-card__team-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.match-card__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.match-card__status {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 2px 7px;
+  border-radius: 100px;
+}
+.match-card__status--live {
+  color: var(--red);
+  background: rgba(255,71,87,0.12);
+}
+.match-card__status--halftime {
+  color: var(--yellow);
+  background: rgba(255,211,42,0.12);
+}
+.match-card__status--finished {
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.04);
+}
+.match-card__status--upcoming {
+  color: var(--text-secondary);
+  background: rgba(255,255,255,0.04);
+}
+.match-card__status--postponed {
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.04);
+}
+
+.match-card__score {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+.match-card__score-sep {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.match-card__detail-btn {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .match-card__team-name { font-size: 0.78rem; }
+  .match-card__logo { width: 20px; height: 20px; }
+}
