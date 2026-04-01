@@ -2,27 +2,35 @@
   "name": "sportscaninfrontend",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://gulkapan9700-keskin.github.io/sportscaninfrontend",
-
+  "homepage": "https://gulkapan9700-sketch.github.io/Sportscanlifrontend",
   "dependencies": {
     "@tanstack/react-query": "^5.17.0",
     "axios": "^1.6.7",
     "date-fns": "^3.6.0",
-    "date-fns-locale": "^3.0.0",
     "lucide-react": "^0.385.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.0",
     "react-scripts": "5.0.1"
   },
-
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "deploy": "gh-pages -d build"
   },
-
   "devDependencies": {
     "gh-pages": "^6.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
