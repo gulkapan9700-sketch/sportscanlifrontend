@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sportscaninfrontend/static/css/main.05b2f1a1.css",
+    "main.js": "/sportscaninfrontend/static/js/main.2776ea3b.js",
+    "index.html": "/sportscaninfrontend/index.html",
+    "main.05b2f1a1.css.map": "/sportscaninfrontend/static/css/main.05b2f1a1.css.map",
+    "main.2776ea3b.js.map": "/sportscaninfrontend/static/js/main.2776ea3b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.05b2f1a1.css",
+    "static/js/main.2776ea3b.js"
+  ]
+}
