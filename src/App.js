@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import FootballPage from './pages/FootballPage';
@@ -11,17 +11,18 @@ import FixtureDetailPage from './pages/FixtureDetailPage';
 
 export default function App() {
   return (
-    <Layout>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/football" element={<FootballPage />} />
-        <Route path="/futbol/mac/:id" element={<FixtureDetailPage />} />
-        <Route path="/basketbol" element={<BasketballPage />} />
-        <Route path="/tenis" element={<TennisPage />} />
-        <Route path="/formula1" element={<Formula1Page />} />
-        <Route path="/mma" element={<MMAPage />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="football" element={<FootballPage />} />
+          <Route path="futbol/mac/:id" element={<FixtureDetailPage />} />
+          <Route path="basketbol" element={<BasketballPage />} />
+          <Route path="tenis" element={<TennisPage />} />
+          <Route path="formula1" element={<Formula1Page />} />
+          <Route path="mma" element={<MMAPage />} />
+        </Route>
       </Routes>
-    </Layout>
+    </BrowserRouter>
   );
 }
-``
